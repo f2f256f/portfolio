@@ -161,6 +161,9 @@ body {
     line-height: 1.5;
     font-weight: 500;
   }
+  .contents .project-img {
+    padding: 0px;
+  }
   .fixed-button {
     top: 20px;
     bottom: auto;
