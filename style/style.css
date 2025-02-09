@@ -148,7 +148,7 @@ body {
   }
   .contents {
     width: 100%;
-    padding: 16px;
+    padding: 14px;
     margin: 0;
   }
   .contents h1 {
@@ -159,7 +159,7 @@ body {
   .contents p {
     font-size: 1.125rem;
     line-height: 1.5;
-    font-weight: 400;
+    font-weight: 500;
   }
   .fixed-button {
     top: 20px;
