@@ -1,0 +1,117 @@
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+  color: #fff;
+  font-family: "Arial", sans-serif;
+  word-break: keep-all;
+  -webkit-hyphens: none;
+          hyphens: none;
+}
+
+.portfolio-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 40px;
+  height: 100vh;
+  overflow-y: auto;
+  align-content: flex-start;
+  justify-content: space-between;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.portfolio-gallery::-webkit-scrollbar {
+  display: none;
+}
+.portfolio-gallery .portfolio-column {
+  width: calc(50% - 8px);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.portfolio-gallery .portfolio-item {
+  width: 100%;
+  display: block;
+  position: relative;
+}
+.portfolio-gallery .portfolio-item a {
+  display: block;
+  text-decoration: none;
+  position: relative;
+}
+.portfolio-gallery .portfolio-item a:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0);
+  transition: background-color 0.3s ease;
+}
+.portfolio-gallery .portfolio-item a:hover:after {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.portfolio-gallery .portfolio-item img,
+.portfolio-gallery .portfolio-item video {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.portfolio-gallery .portfolio-item video {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.contents {
+  width: 200%;
+  height: 100vh;
+  margin-right: 40px;
+  padding-left: 10px;
+  background: #fff;
+  color: #000;
+  overflow-y: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.contents::-webkit-scrollbar {
+  display: none;
+}
+.contents .project {
+  padding-bottom: 60px;
+}
+.contents h1 {
+  font-size: 4rem;
+  letter-spacing: -1.28px;
+  margin-bottom: 20px;
+  padding-bottom: 28px;
+  line-height: 100%;
+}
+.contents p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  font-family: "Pretendard Variable";
+  font-weight: 400;
+  line-height: 150%;
+}
+.contents .project-img {
+  margin-top: 40px;
+  background-color: #000;
+}
+
+.fixed-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+.fixed-button img {
+  width: 60px;
+  height: 60px;
+  transition: transform 0.3s ease-in-out;
+}
+.fixed-button img:hover {
+  transform: scale(1.1);
+}

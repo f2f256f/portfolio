@@ -1,0 +1,135 @@
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+  color: #fff;
+  font-family: 'Arial', sans-serif;
+  word-break: keep-all;
+  hyphens: none;
+}
+
+// 왼쪽 영역
+.portfolio-gallery {
+  // flex: 0.9;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 40px;
+  height: 100vh;
+  overflow-y: auto;
+  align-content: flex-start;
+  justify-content: space-between;
+
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  .portfolio-column {
+    width: calc(50% - 8px);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .portfolio-item {
+    width: 100%;
+    display: block;
+    position: relative;
+
+    a {
+      display: block;
+      text-decoration: none;
+      position: relative;
+
+      &:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0);
+        transition: background-color 0.3s ease;
+      }
+
+      &:hover:after {
+        background-color: rgba(0, 0, 0, 0.5);
+      }
+    }
+
+    img,
+    video {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    video {
+      object-fit: cover;
+    }
+  }
+}
+
+// 오른쪽 영역
+.contents {
+  width: 200%;
+  height: 100vh;
+  margin-right: 40px;
+  padding-left: 10px;
+  background: #fff;
+  color: #000;
+  overflow-y: auto;
+
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  .project {
+    padding-bottom: 60px;
+  }
+
+  h1 {
+    font-size: 4rem;
+    letter-spacing: -1.28px;
+    margin-bottom: 20px;
+    padding-bottom: 28px;
+    line-height: 100%;
+  }
+
+  p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    font-family: 'Pretendard Variable';
+    font-weight: 400;
+    line-height: 150%;
+  }
+
+  .project-img {
+    margin-top: 40px;
+    background-color: #000;
+  }
+}
+
+// 하단 고정 버튼
+.fixed-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+
+  img {
+    width: 60px;
+    height: 60px;
+    transition: transform 0.3s ease-in-out;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}
