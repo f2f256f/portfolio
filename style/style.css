@@ -5,7 +5,7 @@ body {
   height: 100vh;
   overflow: hidden;
   color: #fff;
-  font-family: "Arial", sans-serif;
+  font-family: "Arial", "Pretendard Variable", sans-serif;
   word-break: keep-all;
   -webkit-hyphens: none;
           hyphens: none;
@@ -67,7 +67,7 @@ body {
 }
 
 .contents {
-  width: 200%;
+  width: 220%;
   height: 100vh;
   margin-right: 40px;
   padding-left: 10px;
@@ -90,6 +90,16 @@ body {
   padding-bottom: 28px;
   line-height: 100%;
 }
+.contents #ig {
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+}
+.contents #ig:hover {
+  opacity: 0.6;
+}
+.contents #kr {
+  line-height: 120%;
+}
 .contents p {
   font-size: 1.1rem;
   line-height: 1.8;
@@ -110,8 +120,14 @@ body {
 .fixed-button img {
   width: 60px;
   height: 60px;
-  transition: transform 0.3s ease-in-out;
+  animation: spin 6s linear infinite;
 }
-.fixed-button img:hover {
-  transform: scale(1.1);
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
