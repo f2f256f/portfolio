@@ -80,6 +80,13 @@ body {
 .contents::-webkit-scrollbar {
   display: none;
 }
+.contents a {
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+}
+.contents a:hover {
+  opacity: 0.3;
+}
 .contents .project {
   padding-bottom: 60px;
 }
@@ -129,5 +136,38 @@ body {
   }
   to {
     transform: rotate(360deg);
+  }
+}
+@media (max-width: 622px) {
+  body {
+    flex-direction: column;
+    overflow-y: auto;
+  }
+  .portfolio-gallery {
+    display: none;
+  }
+  .contents {
+    width: 100%;
+    padding: 16px;
+    margin: 0;
+  }
+  .contents h1 {
+    font-size: 3rem;
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
+  .contents p {
+    font-size: 1.125rem;
+    line-height: 1.5;
+    font-weight: 400;
+  }
+  .fixed-button {
+    top: 20px;
+    bottom: auto;
+    right: 20px;
+  }
+  .fixed-button img {
+    width: 50px;
+    height: 50px;
   }
 }
